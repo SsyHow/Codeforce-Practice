@@ -1,0 +1,28 @@
+def I():
+    return input()
+
+
+def II():
+    return int(input())
+
+
+def MII():
+    return map(int, input().split())
+
+
+def LI():
+    return list(input().split())
+
+
+def LII():
+    return list(map(int, input().split()))
+
+a = II()
+for _ in range(a):
+    b = II()
+    L = LII()
+    l, r = L.index(1), b - L[::-1].index(1) - 1
+
+    c = L.count(1)
+
+    print(r - l - c + 1)
