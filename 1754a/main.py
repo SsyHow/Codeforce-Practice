@@ -19,5 +19,15 @@ def LII():
 
 a = II()
 for _ in range(a):
-    x, y = MII()
-    print(max(x, y))
+    b = II()
+    s = I()
+    q = ans = 0
+    for i in s:
+        if i == 'Q':
+            q += 1
+        else:
+            q = max(q - 1, 0)
+    if q > 0:
+        print("No")
+    else:
+        print("Yes")
