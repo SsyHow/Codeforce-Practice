@@ -19,8 +19,12 @@ def LII():
 
 a = II()
 for _ in range(a):
-    x, y, z = MII()
-    if x == y == z:
-        print("YES")
-        continue
-    print("YES" if x - y - z > 1 else "NO")
+    b = II()
+    s = I()
+    ans = 0
+    for i in range(b-1):
+        if s[i:i+3] == '010':
+            ans += 1
+        elif s[i:i+2] == '00':
+            ans += 2
+    print(ans)
